@@ -58,5 +58,6 @@ public class AdminInteractions {
 			System.out.println("Unrecognized option");
 			break;
 		}
+		input.close();
 	}
 }
