@@ -10,14 +10,20 @@
 
 <%
 DBController dbHome = new DBController();
+User user = (User)LogOn.getCurrentAccount();
 School school = dbHome.getSchool(request.getParameter("School"));
-if(school!=null){
+boolean saved = user.getSaved().contains(school);
+if(school!=null && user.isLoggedOn()){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
 			<tr>
+			<%if(saved){%>
 				<th colspan="3">VIEW SAVED SCHOOL<br>
+			<%}else{%>
+				<th colspan="3">VIEW SCHOOL<br>
+			<%}%>
 				</th>
 			</tr>
 			<tr>
@@ -126,11 +132,27 @@ if(school!=null){
 				</td>
 			</tr>
 			<tr>
-				<th colspan="3">
+				<td>
 					<form method="post" action="ViewSavedSchools.jsp" name="Cancel">
-						<input value="Cancel" name="Cancel" type="submit" style="color: rgb(0, 0, 0);">
+					<input value="Cancel" name="Cancel" type="submit" style="color: rgb(0, 0, 0);">
 					</form>
-				</th>
+				</td>
+				<%if(saved){%>
+					<td>
+						<form method="post" action="RemoveSavedSchool.jsp" name="View">
+							<input value="Remove" name="Remove" type="submit" style="color: rgb(0, 0, 0);">
+							<input name="School" value=<%=school.getName()%> type="hidden">
+						</form>
+					</td>
+				<%}else{%>
+					<td>
+						<form method="post" action="SaveSchool.jsp" name="Save">
+							<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
+							<input name="School" value=<%=school.getName()%> type="hidden">
+						</form>
+					</td>
+				<%}%>
+				
 			</tr>
 		</tbody>
 	</table>

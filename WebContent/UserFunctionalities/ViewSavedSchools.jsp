@@ -19,7 +19,7 @@ LogOn.setCurrentAccount(user);
 user.setLoggedOn(true);
 if (user != null && user.isLoggedOn()) {
 %>
-<table style="vertical-align: left; width: 590px; height: 60px;"
+<table style="vertical-align: left; width: 50%; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
 	<tbody>
 		<tr>
