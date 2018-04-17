@@ -10,8 +10,8 @@
 
 <%
 DBController dbHome = new DBController();
-//School school = dbHome.getSchool(request.getParameter("School"));
-School school = dbHome.getSchool("YALE");
+School school = dbHome.getSchool(request.getParameter("School"));
+//School school = dbHome.getSchool("YALE");
 if(school!=null){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
@@ -126,6 +126,9 @@ if(school!=null){
 		</tbody>
 	</table>
 	<br>
+	<form method="post" action="ViewSavedSchools.jsp" name="Cancel"><br>
+		<input value="Cancel" name="Cancel" type="submit">
+	</form>
 <%}%>
 
 </body>

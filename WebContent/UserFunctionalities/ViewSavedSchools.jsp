@@ -18,7 +18,6 @@ User user = new User("TESTUser", "TESTPass", "First", "Last", 'u', 'Y', savedSch
 LogOn.setCurrentAccount(user);
 if (user != null) {
 %>
-
 <table style="text-align: center; width: 590px; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
 	<tbody>
@@ -28,23 +27,25 @@ if (user != null) {
 		</tr>
 		<%for(School s: user.getSaved()){%>
 		<tr>
-			<td
-				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;"><input
-				value="Remove" name="Remove" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td
-				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;"><%=s.getName()%><br>
+			<td	style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<input value="Remove" name="Remove" type="submit">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</td>
-			<td
-				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;"><input
-				value="Edit" name="Edit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<%=s.getName()%><br>
+			</td>
+			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<form method="post" action="ViewSchool.jsp" name="View">
+					<input value="View" name="View" type="submit">
+					<input name="School" value=<%=s.getName()%> type="hidden">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</form>
+			</td>
 		</tr>
 		<%}%>
 	</tbody>
 </table>
-
 <%}%>
-
-
 
 
 </body>
