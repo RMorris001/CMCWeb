@@ -128,12 +128,5 @@ if(school!=null){
 	<br>
 <%}%>
 
-
-
-
-
-
-
-
 </body>
 </html>
