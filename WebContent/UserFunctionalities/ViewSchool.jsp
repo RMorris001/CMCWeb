@@ -11,12 +11,15 @@
 <%
 DBController dbHome = new DBController();
 School school = dbHome.getSchool(request.getParameter("School"));
-//School school = dbHome.getSchool("YALE");
 if(school!=null){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
+			<tr>
+				<th colspan="3">VIEW SAVED SCHOOL<br>
+				</th>
+			</tr>
 			<tr>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">SCHOOL<br>
 				</td>
@@ -120,15 +123,17 @@ if(school!=null){
 				<%for(String e:school.getAreasOfStudy()) {%>
 					<input readonly="readonly" name="Emphasis" value="<%=e%>">
 				<%}%>
-				<br>
 				</td>
+			</tr>
+			<tr>
+				<th colspan="3">
+					<form method="post" action="ViewSavedSchools.jsp" name="Cancel">
+						<input value="Cancel" name="Cancel" type="submit" style="color: rgb(0, 0, 0);">
+					</form>
+				</th>
 			</tr>
 		</tbody>
 	</table>
-	<br>
-	<form method="post" action="ViewSavedSchools.jsp" name="Cancel"><br>
-		<input value="Cancel" name="Cancel" type="submit">
-	</form>
 <%}%>
 
 </body>
