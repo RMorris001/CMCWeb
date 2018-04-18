@@ -9,35 +9,33 @@ package CMC;
  */
 public class LogOn {
 
-	private static boolean isLoggedOn = false;
-	// Current account variable
-	private static Account currentAccount = null;
 
+	private boolean isLoggedOn;
+	// Current account variable
+	private static Account currentAccount;
+
+	
+	public LogOn() {
+		isLoggedOn = false;
+		currentAccount = null;
+	}
 	/**
 	 * Static method that gets the current account
 	 * 
 	 * @return the current account object
 	 */
-	public static Account getCurrentAccount() {
+	public Account getCurrentAccount() {
 		return currentAccount;
 	}
 	
-	/**
-	 * Method that removes any old leader and sets the new leader
-	 * 
-	 * @param a new acount object
-	 */
-	public static void setCurrentAccount(Account a) {
-		if(currentAccount!=null)
-			currentAccount.setLoggedOn(false);
+	public void setCurrentAccount(Account a) {
 		currentAccount = a;
-		currentAccount.setLoggedOn(true);
 	}
 	
-	public static boolean getIsLoggedOn() {
+	public  boolean getIsLoggedOn() {
 		return isLoggedOn;
 	}
-	
+
 	/**
 	 * Static Run method that attempts to log in the user and
 	 * open their account's respective menu
@@ -45,29 +43,16 @@ public class LogOn {
 	 * @param username user name credential
 	 * @param password password credentials
 	 */
-	public static void run(String username, String password) {
-		
-		
+	public Account run(String username, String password) {
 		DBController dbHome = new DBController();
 		if (dbHome.credentialValidation(username, password)) {
-			Account attempedUser = dbHome.getAccount(username);
-			if (attempedUser.getStatus() == 'N') {
-				System.out.println("<>==E R R O R==<>\nAccount is deactivated, please contact support.\nCALL 1-800-411-PAIN FOR ASSISTANCE");
-			}
-			else {
-				currentAccount = attempedUser;
-				isLoggedOn = true;
-			}
+			isLoggedOn = true;
+			currentAccount = dbHome.getAccount(username);
+			return currentAccount;
 		}
 		else {
-			System.out.println("Error: Invalid username or password.");
-			return;
-			//System.exit(0);
+			return null;
 		}
-
-		if (currentAccount.getType() == 'a')
-			AdminInteractions.adminMenu(currentAccount);
-
 	}
 
 	public String isLoggedOn() {
@@ -77,6 +62,10 @@ public class LogOn {
 		else {
 			return "false";
 		}
+	}
+	
+	public boolean isDeactive() {
+		return this.getCurrentAccount().getStatus() == 'N';
 	}
 	
 }

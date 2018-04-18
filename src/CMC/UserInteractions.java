@@ -9,8 +9,12 @@ package CMC;
 import java.util.Scanner;
 
 public class UserInteractions {
-	private UserFunctionalityController ufc = new UserFunctionalityController();
+	private UserFunctionalityController ufc;
 
+	
+	public UserInteractions(Account potentialAccount) {
+		ufc = new UserFunctionalityController(potentialAccount);		
+	}
 	/**
 	 * Method that opens the GUI for the user to interact with Pre: Account must be
 	 * a user
@@ -91,6 +95,9 @@ public class UserInteractions {
 
 	public void viewSchool(String schoolName) {
 		ufc.viewSchool(schoolName);
-		
+	}
+	
+	public boolean isActive(String username) {
+		return ufc.isActive(username);
 	}
 }
