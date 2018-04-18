@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-
+<%	DBController dbHome = new DBController();
+	LogOn logOn = (LogOn)session.getAttribute("LogOn");
+	out.print(logOn.getCurrentAccount().getUsername());
+	User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());%>
 <table style="text-align: left; width: 25%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
@@ -17,7 +20,8 @@ href="Search.jsp">Search for Schools</a>
 </tr>
 
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;"><a
+<td colspan="5" rowspan="1" style="vertical-align: top;">
+<input name="Username" value=<%=user.getUsername()%> type="hidden"><a
 href="ViewSavedSchools.jsp">Manage Saved Schools</a>
 </td>
 </tr>

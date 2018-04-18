@@ -4,11 +4,8 @@
 	import="WebContent.*"%>
 
 <%	DBController dbHome = new DBController();
-	ArrayList<School> savedSchools = new ArrayList<School>();
-	savedSchools.add(dbHome.getSchool("YALE"));
-	savedSchools.add(dbHome.getSchool("BROWN"));
-	savedSchools.add(dbHome.getSchool("HARVARD"));
-	Account account = new User("TESTUser", "TESTPass", "First", "Last", 'u', 'Y', savedSchools);
-	LogOn.setCurrentAccount(account);
-	session.setAttribute("Account", account);
+	LogOn logOnObject = new LogOn();
+	User account = (User)logOnObject.run("juser", "user");
+	account.saveSchool(dbHome.getSchool("YALE"));
+	session.setAttribute("LogOn", logOnObject);
 	response.sendRedirect("/CMCWeb/UserFunctionalities/UserMenu.jsp");%>

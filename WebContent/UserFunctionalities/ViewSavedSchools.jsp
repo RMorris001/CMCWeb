@@ -8,11 +8,10 @@
 </head>
 <body>
 
-<%
-DBController dbHome = new DBController();
-//User user = (User)LogOn.getCurrentAccount();
-User user = (User)session.getAttribute("Account");
-if (user != null && user.isLoggedOn()) {
+<%DBController dbHome = new DBController();
+LogOn logOn = (LogOn)session.getAttribute("LogOn");
+User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());
+ArrayList<School> saved = user.getSaved();
 %>
 <table style="vertical-align: left; width: 50%; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
@@ -21,7 +20,7 @@ if (user != null && user.isLoggedOn()) {
 			<th colspan="3"><%=user.getUsername().toUpperCase()%>'S SAVED SCHOOLS<br>
 			</th>
 		</tr>
-		<%for(School s: user.getSaved()){%>
+		<%for(School s: saved){%>
 		<tr>
 			<td	style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
 				<form method="post" action="RemoveSavedSchool.jsp" name="View">
@@ -49,7 +48,6 @@ if (user != null && user.isLoggedOn()) {
 		</tr>
 	</tbody>
 </table>
-<%}%>
 
 
 </body>

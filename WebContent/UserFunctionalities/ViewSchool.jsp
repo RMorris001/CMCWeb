@@ -8,13 +8,12 @@
 </head>
 <body>
 
-<%
-	DBController dbHome = new DBController();
-	//User user = (User)LogOn.getCurrentAccount();
-	User user = (User)session.getAttribute("Account");
+<%	DBController dbHome = new DBController();
+	LogOn logOn = (LogOn)session.getAttribute("LogOn");
+	User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());
 	School school = dbHome.getSchool(request.getParameter("School"));
 	boolean saved = user.getSaved().contains(school);
-	if(school!=null && user.isLoggedOn()){
+	if(school!=null){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
