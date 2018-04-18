@@ -22,14 +22,22 @@ public class LogOn {
 		return currentAccount;
 	}
 	
+	/**
+	 * Method that removes any old leader and sets the new leader
+	 * 
+	 * @param a new acount object
+	 */
 	public static void setCurrentAccount(Account a) {
+		if(currentAccount!=null)
+			currentAccount.setLoggedOn(false);
 		currentAccount = a;
+		currentAccount.setLoggedOn(true);
 	}
 	
 	public static boolean getIsLoggedOn() {
 		return isLoggedOn;
 	}
-
+	
 	/**
 	 * Static Run method that attempts to log in the user and
 	 * open their account's respective menu

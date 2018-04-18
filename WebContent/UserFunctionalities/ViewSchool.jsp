@@ -9,11 +9,12 @@
 <body>
 
 <%
-DBController dbHome = new DBController();
-User user = (User)LogOn.getCurrentAccount();
-School school = dbHome.getSchool(request.getParameter("School"));
-boolean saved = user.getSaved().contains(school);
-if(school!=null && user.isLoggedOn()){
+	DBController dbHome = new DBController();
+	//User user = (User)LogOn.getCurrentAccount();
+	User user = (User)session.getAttribute("Account");
+	School school = dbHome.getSchool(request.getParameter("School"));
+	boolean saved = user.getSaved().contains(school);
+	if(school!=null && user.isLoggedOn()){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
@@ -152,7 +153,6 @@ if(school!=null && user.isLoggedOn()){
 						</form>
 					</td>
 				<%}%>
-				
 			</tr>
 		</tbody>
 	</table>

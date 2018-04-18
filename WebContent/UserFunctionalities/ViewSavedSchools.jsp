@@ -11,12 +11,7 @@
 <%
 DBController dbHome = new DBController();
 //User user = (User)LogOn.getCurrentAccount();
-ArrayList<School> savedSchools = new ArrayList<School>();
-savedSchools.add(dbHome.getSchool("YALE"));
-savedSchools.add(dbHome.getSchool("BROWN"));
-User user = new User("TESTUser", "TESTPass", "First", "Last", 'u', 'Y', savedSchools);
-LogOn.setCurrentAccount(user);
-user.setLoggedOn(true);
+User user = (User)session.getAttribute("Account");
 if (user != null && user.isLoggedOn()) {
 %>
 <table style="vertical-align: left; width: 50%; height: 60px;"
