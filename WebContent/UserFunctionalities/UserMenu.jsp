@@ -6,10 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<%--	DBController dbHome = new DBController();
-	LogOn logOn = (LogOn)session.getAttribute("LogOn");
-	out.print(logOn.getCurrentAccount().getUsername());
-	User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());--%>
 <table style="text-align: left; width: 25%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>

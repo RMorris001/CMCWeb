@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
-	<%@include file="verifyLogin.jsp"%>
-	
+<%--@include file="/CMCWeb/Security-action.jsp"--%>
+
 <%
 	DBController dbHome = new DBController();
-	UserFunctionalityController ucHome = new UserFunctionalityController();
+	UserInteractions ui = (UserInteractions) session.getAttribute("function");
+	User user = ui.getUser();
+	ArrayList<School> saved = user.getSaved();
 	School removedSchool = dbHome.getSchool(request.getParameter("School"));
-	ucHome.removeSchool(removedSchool.getName());
+	ui.removeSchool(removedSchool.getName());
 	response.sendRedirect("ViewSavedSchools.jsp");
-    
 %>
