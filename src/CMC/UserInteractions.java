@@ -60,6 +60,15 @@ public class UserInteractions {
 	}
 
 	/**
+	 * Method that returns the current user
+	 * 
+	 * @return the current user associated with an interaction
+	 */
+	public User getUser() {
+		return ufc.viewProfile();
+	}
+	
+	/**
 	 * Method to display the search menu if the user selected it Pre: User selects
 	 * to display school search
 	 */

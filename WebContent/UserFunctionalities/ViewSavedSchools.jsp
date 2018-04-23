@@ -8,11 +8,10 @@
 </head>
 <body>
 
-<%DBController dbHome = new DBController();
-LogOn logOn = (LogOn)session.getAttribute("LogOn");
-User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());
-ArrayList<School> saved = user.getSaved();
-%>
+<%	DBController dbHome = new DBController();
+	UserInteractions ui = (UserInteractions)session.getAttribute("function");
+	User user = ui.getUser();
+	ArrayList<School> saved = user.getSaved();%>
 <table style="vertical-align: left; width: 50%; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
 	<tbody>

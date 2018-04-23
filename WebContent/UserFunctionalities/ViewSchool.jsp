@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="CMC.*"%>
+	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,17 +9,18 @@
 <body>
 
 <%	DBController dbHome = new DBController();
-	LogOn logOn = (LogOn)session.getAttribute("LogOn");
-	User user = dbHome.getUser(logOn.getCurrentAccount().getUsername());
+	UserInteractions ui = (UserInteractions)session.getAttribute("function");
+	User user = ui.getUser();
+	ArrayList<School> saved = user.getSaved();
 	School school = dbHome.getSchool(request.getParameter("School"));
-	boolean saved = user.getSaved().contains(school);
+	boolean isSaved = user.getSaved().contains(school);
 	if(school!=null){
 %>
 	<table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
 			<tr>
-			<%if(saved){%>
+			<%if(isSaved){%>
 				<th colspan="3">VIEW SAVED SCHOOL<br>
 			<%}else{%>
 				<th colspan="3">VIEW SCHOOL<br>
@@ -137,7 +138,7 @@
 					<input value="Cancel" name="Cancel" type="submit" style="color: rgb(0, 0, 0);">
 					</form>
 				</td>
-				<%if(saved){%>
+				<%if(isSaved){%>
 					<td>
 						<form method="post" action="RemoveSavedSchool.jsp" name="View">
 							<input value="Remove" name="Remove" type="submit" style="color: rgb(0, 0, 0);">
