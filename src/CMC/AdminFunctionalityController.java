@@ -19,6 +19,18 @@ public class AdminFunctionalityController {
 	 */
 	private SchoolController schoolController = new SchoolController();
 	
+	
+	//private User curUser;
+	
+
+	/**
+	 * Contructor for the UFC
+	 */
+	public AdminFunctionalityController() {
+		//curUser = dBController.getUser(currentUser.getUsername());
+		dBController = new DBController();
+		schoolController = new SchoolController();
+	}
 	/** 
 	 * Views all the schools in the database
 	 * 
@@ -60,6 +72,26 @@ public class AdminFunctionalityController {
 			return newSchool;
 		
 	}
+	/**
+	 * Adds a new school
+	 * 
+	 * @param school The school object that should be added to the database
+	 * @return true if the school is added, false if not
+	 */
+	public boolean addNewSchool2(String name, String state, String location, String control, int numStudents,
+            double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
+            int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
+            int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy) {
+			
+		School newSchool = new School(name, state, location, control, numStudents, percentFemale, verbalSAT,
+                mathSAT, expense, percentFinAid, numApplicants, percentAdmit,
+                percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
+
+		boolean addedSchool = dBController.addNewSchool(newSchool);
+		return addedSchool; 
+		
+	}
+	
 	/**
 	 * Removes a given school
 	 * 
