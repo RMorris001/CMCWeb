@@ -125,5 +125,5 @@ ArrayList<School> results = sc.search(school, state, location, control, numStude
 
 //String school1 = results.get(0).getName();
 System.out.println(results);
-//response.sendRedirect("ViewSearchResults.jsp?school1");
+response.sendRedirect("ViewSearchResults.jsp");
 %>
