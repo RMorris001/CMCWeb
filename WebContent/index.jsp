@@ -81,7 +81,7 @@ span.psw {
 
 	<br>
 	<form action="Login_action.jsp">
-		<div class="container" style="background-color: #F4F6F7">
+		<div class="container" style="background-color: #F4F6F7; color: rgb(0, 0, 0);">
 			<label for="uname"><b>Username</b></label> <input type="text"
 				placeholder="Enter Username" name="Username" required> <label
 				for="psw"><b>Password</b></label> <input type="password"
