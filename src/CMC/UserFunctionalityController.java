@@ -163,6 +163,9 @@ public class UserFunctionalityController {
 			curUser.setLast(l);
 		if (p != null && p != "")
 			curUser.setPassword(p);
+		dbHome.editAccount(curUser.getUsername(), curUser.getPassword(),
+							curUser.getFirst(), curUser.getLast(),
+							curUser.getType(), curUser.getStatus());
 	}
 
 	public boolean isActive(String username) {

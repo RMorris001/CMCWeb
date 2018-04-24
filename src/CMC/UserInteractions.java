@@ -109,4 +109,8 @@ public class UserInteractions {
 	public boolean isActive(String username) {
 		return ufc.isActive(username);
 	}
+	
+	public void editProfile(String f, String l, String p) {
+		ufc.editProfile(f, l, p);
+	}
 }
