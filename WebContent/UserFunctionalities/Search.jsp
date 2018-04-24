@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@include file="../template.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +8,7 @@
 <title>Search School</title>
 </head>
 <body>
-
+<form method="post" action="Search_action.jsp" name="Search">
 <table style="text-align: left; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
@@ -37,7 +38,7 @@
 				<td style="vertical-align: top; white-space: nowrap;">by CONTROL<br>
 				</td>
 				<td style="vertical-align: top;">
-					<input name="Control" value="PRIVATE">(PRIVATE, STATE, CITY or -1 for UNKNOWN)<br>
+					<input name="Control" >(PRIVATE, STATE, CITY or -1 for UNKNOWN)<br>
 				</td>
 			</tr>
 			<tr>
@@ -149,19 +150,16 @@
 			</tr>
 			<tr>
 				<td>
-					<form method="post" action="UserMenu.jsp" name="Cancel">
 					<input value="CANCEL" name="Cancel" type="submit" style="color: rgb(0, 0, 0); padding-right:150px; padding-left:150px;">
-					</form>
+
 				</td>
 					<td>
-							<form method="post" action="Search_action.jsp" name="Search">
-							<input value="SUBMIT" name="Submit" type="submit" style="color: rgb(0, 0, 0); padding-right:280px; padding-left:280px;">
-							<input name="School" value="" type="hidden">
-						</form>
+						<input value="SUBMIT" name="Submit" type="submit" style="color: rgb(0, 0, 0); padding-right:280px; padding-left:280px;">
+						<input name="School" value="" type="hidden">
 					</td>
 			</tr>
 		</tbody>
 	</table>
-
+</form>
 </body>
 </html>
