@@ -16,7 +16,7 @@ body {
 
 </style>
 </head>
-<body text = "white">
+<body text = "black">
 
 <p id="rcorners1">
     <img src="CmcLogo.png" alt="CmcLogo" height="70" width="70">
