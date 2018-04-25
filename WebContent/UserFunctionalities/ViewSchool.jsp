@@ -10,6 +10,7 @@
 
 <%	DBController dbHome = new DBController();
 	UserInteractions ui = (UserInteractions)session.getAttribute("function");
+	SearchControllerV2 sc = new SearchControllerV2();
 	User user = ui.getUser();
 	ArrayList<School> saved = user.getSaved();
 	System.out.println(request.getParameter("School"));
@@ -158,6 +159,44 @@
 		</tbody>
 	</table>
 <%}%>
+<br>
+<table style="vertical-align: left; width: 50%; height: 60px;"
+	border="1" cellpadding="2" cellspacing="2">
+	<tbody>
+		<tr>
+			<th colspan="3"><%=school.getName().toUpperCase()%>'S RECOMENDATIONS<br>
+			</th>
+		</tr>
+		<%ArrayList<School> recomended = sc.getRecommendations(school);
+		for(School s: recomended){%>
+		<tr>
+			<td	style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<form method="post" action="RemoveSavedSchool.jsp" name="View">
+					<input value="Remove" name="Remove" type="submit" style="color: rgb(0, 0, 0);">
+					<input name="School" value=<%=s.getName()%> type="hidden">
+				</form>
+			</td>
+			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<%=s.getName()%><br>
+			</td>
+			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
+				<form method="post" action="ViewSchool.jsp" name="View">
+					<input value="View" name="View" type="submit" style="color: rgb(0, 0, 0);">
+					<input name="School" value=<%=s.getName()%> type="hidden">
+				</form>
+			</td>
+		</tr>
+		<%}%>
+		<tr>
+			<th colspan="3">
+				<form method="post" action="UserMenu.jsp" name="Cancel">
+					<input value="Cancel" name="Cancel" type="submit" style="color: rgb(0, 0, 0);">
+				</form>
+			</th>
+		</tr>
+	</tbody>
+</table>
+
 
 </body>
 </html>
