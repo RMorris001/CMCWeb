@@ -87,10 +87,10 @@ public class AdminInteractions {
 		}
 		input.close();
 	}
-
-	public void viewSchool(String name) {
-		afHome.viewSchool(name);
-	}
+	
+	public School viewSchool(String name) {
+		return afHome.viewSchool(name);
+}
 
 	public ArrayList<School> viewSchools() {
 		return afHome.viewSchools();
@@ -98,6 +98,10 @@ public class AdminInteractions {
 
 	public void addNewSchool(School school) {
 		afHome.addNewSchool(school);
+	}
+	
+	public void removeSchool(School school) {
+		afHome.removeSchool(school);
 	}
 
 	public School newSchool() {

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
+    <%@include file="/../General/AccountTemplate.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +8,7 @@
 </head>
 <body>
 <%AdminInteractions ai = (AdminInteractions)session.getAttribute("function");%>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+<table style="text-align: left; background-color: #F4F6F7; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr align="center">
