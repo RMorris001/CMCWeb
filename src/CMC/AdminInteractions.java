@@ -180,8 +180,7 @@ public class AdminInteractions {
 	}
 
 	public User getUser(String userName) {
-		Account account = afHome.viewAccount(userName);
-		User curUser = dbHome.getUser(account.getUsername());
+		User curUser = afHome.getUser(userName);
 		return curUser;
 
 	}

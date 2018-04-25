@@ -150,6 +150,10 @@ public class AdminFunctionalityController {
 		}
 		return dBController.addAccount(account);
 	}
+	
+	public User getUser(String uName) {
+		return dBController.getUser(uName);
+	}
 
 	/**
 	 * Deactivates the given user

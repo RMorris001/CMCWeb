@@ -14,14 +14,14 @@
 AdminInteractions ai = (AdminInteractions)session.getAttribute("function");
 System.out.println(request.getParameter("UserName"));
 User user = ai.getUser(request.getParameter("UserName"));
+System.out.println(user);
 %>
 <form method="post" action="EditAccount_action.jsp" name="editUser">
 <table style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
 border="1" >
 <tbody>
 <tr>
-<th colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<%=user.getUsername().toUpperCase()%>'S PROFILE<br>
+<th colspan="3">
 </th>
 </tr>
 <tr>
