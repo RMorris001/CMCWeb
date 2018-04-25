@@ -1,51 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
 <%@include file="/../General/AccountTemplate.jsp"%>
-
 <html>
-<style>
-.container1 {
-	padding: 16px;
-	background-color: gray;
-	position: fixed;
-	width: 20%;
-	height: 20%;
-}
-
-.container1:hover {
-    opacity: 0.8;
-    width: 20.5%;
-    height: 20.5%;
-    
-}
-</style>
-</head>
 <body>
-<a
-href="ViewSchools.jsp">View Schools</a>
+	
+	<form action="[Insert View Accounts Here]">
+  <input type="image" src="./account_image_cmc.png" alt="Submit" width="20%" height="40%" align = "right" style="margin:0px 200px">
+</form>
 
-	<form action="ViewSchools.jsp">
-		<div class="container1" style="margin: 0px 130px; right: 25px;"
-			align="center"     vertical-align= center
-			> View Schools</div>
-	</form>
-	<form action="/action_page.php">
-		<div class="container1" align="center" style="margin: 0px 130px;"></div>
-	</form>
-
-	<form action="/action_page.php">
-		<div class="container1" style="margin: 0px 500px" align="center"></div>
-	</form>
-	<form action="/action_page.php">
-		<div class="container1" align="center" style="margin: 250px 500px;"></div>
-	</form>
-
-	<form action="/action_page.php">
-		<div class="container1" style="margin: 250px 130px; right: 25px;"
-			align="center"></div>
-	</form>
-	<form action="/action_page.php">
-		<div class="container1" align="center" style="margin: 250px 130px;"></div>
-	</form>
+<form action="[Insert View Schools Here]">
+  <input type="image" src="./school_image_cmc.png" alt="Submit" width="20%" height="40%" align = "left" style="margin: 0px 200px">
+</form>
 </body>
 </html>
