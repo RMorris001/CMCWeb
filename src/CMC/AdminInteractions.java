@@ -11,8 +11,12 @@ import java.util.*;
 public class AdminInteractions {
 	private AdminFunctionalityController afHome;
 	private DBController dbHome;
-	public AdminInteractions(Account potentialAccount) {
-		afHome = new AdminFunctionalityController();		
+	private Account currentAdmin;
+	private boolean isLoggedOn;
+	public AdminInteractions(Account logAccount) {
+		//currentAdmin = 
+		isLoggedOn = true;
+		afHome = new AdminFunctionalityController(logAccount);		
 	}
 	public void adminMenu()
 	{
@@ -124,8 +128,8 @@ public class AdminInteractions {
 		return newSchool;
 		
 	}
-	public void viewAccounts() {
-		afHome.viewAccounts();
+	public ArrayList<Account> viewAccounts() {
+		return afHome.viewAccounts();
 	}
 	public Account newAccount() {
 		Scanner input3 = new Scanner(System.in);

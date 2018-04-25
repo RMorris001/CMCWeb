@@ -23,14 +23,28 @@ public class AdminFunctionalityController {
 	//private User curUser;
 	
 
+
 	/**
 	 * Contructor for the UFC
 	 */
-	public AdminFunctionalityController() {
-		//curUser = dBController.getUser(currentUser.getUsername());
+	private Account curAccount;
+	
+
+
+	public AdminFunctionalityController(Account account) {
+		curAccount = dBController.getAccount(account.getUsername());
 		dBController = new DBController();
 		schoolController = new SchoolController();
 	}
+	
+	public Account getCurAccount() {
+		return curAccount;
+	}
+
+	public void setCurAccount(Account curAccount) {
+		this.curAccount = curAccount;
+	}
+	
 	/** 
 	 * Views all the schools in the database
 	 * 
