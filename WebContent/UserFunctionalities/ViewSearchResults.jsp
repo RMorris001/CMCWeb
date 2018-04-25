@@ -14,12 +14,13 @@
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
 			<tr><th colspan="3">Search Results<br></th></tr>
-			<%for(School s:searchResults){ %>
+			<%for(School s:searchResults){ 
+			System.out.println(s.getName());%>
 			<tr>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
 					<form method="post" action="SaveSchool.jsp" name="Save">
 						<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
-						<input name="School" value=<%=s.getName()%> type="hidden">
+						<input name="SchoolName" value=<%s.getName();%>  >
 					</form>
 				</td>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
