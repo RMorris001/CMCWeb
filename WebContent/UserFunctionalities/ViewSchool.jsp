@@ -12,6 +12,7 @@
 	UserInteractions ui = (UserInteractions)session.getAttribute("function");
 	User user = ui.getUser();
 	ArrayList<School> saved = user.getSaved();
+	System.out.println(request.getParameter("School"));
 	School school = dbHome.getSchool(request.getParameter("School"));
 	boolean isSaved = user.getSaved().contains(school);
 	if(school!=null){

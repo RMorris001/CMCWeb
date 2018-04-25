@@ -17,15 +17,20 @@
 			<%for(School s:searchResults){ %>
 			<tr>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
-				<form method="post" action="SaveSchool.jsp" name="Save">
-					<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
-				</form>
+					<form method="post" action="SaveSchool.jsp" name="Save">
+						<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
+						<input name="School" value=<%=s.getName()%> type="hidden">
+					</form>
 				</td>
-				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;"><%=s.getName()%></td>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
-				<form method="post" action="ViewSchool.jsp" name="View">
-					<input value="View" name="View" type="submit" style="color: rgb(0, 0, 0);">
-				</form></td>
+					<%=s.getName()%>
+				</td>
+				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
+					<form method="post" action="ViewSchool.jsp" name="View">
+						<input value="View" name="View" type="submit" style="color: rgb(0, 0, 0);">
+						<input name="School" value=<%=s.getName()%> type="hidden">
+					</form>
+				</td>
 			</tr>
 			<%}%>
 </tbody>
