@@ -3,6 +3,8 @@
     
     <%
     UserInteractions ui = (UserInteractions) session.getAttribute("function");
-    ui.saveSchool(request.getParameter("School"));
+    String schoolName = request.getParameter("SchoolName");
+    System.out.println("name: " +schoolName);
+    ui.saveSchool(schoolName);
     response.sendRedirect("UserMenu.jsp"); 
     %>
