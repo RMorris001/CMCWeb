@@ -38,9 +38,7 @@ button {
 	position: fixed;
 	right: 25px;
 	top: 30px;
-	border: none;
-	cursor: pointer;
-	border: none;
+	
 	
 }
 
