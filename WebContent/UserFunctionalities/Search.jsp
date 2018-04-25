@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@include file="/../General/GeneralTemplate.jsp"%>
+    <%@include file="../General/GeneralTemplate.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -151,7 +151,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input value="CANCEL" name="Cancel" type="submit" style="color: rgb(0, 0, 0); padding-right:150px; padding-left:150px;">
+					<input value="Reset" name="Reset" type="reset" style="color: rgb(0, 0, 0); padding-right:150px; padding-left:150px;">
 
 				</td>
 					<td>

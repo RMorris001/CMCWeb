@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"import="CMC.*" import="java.util.*" %>
+    pageEncoding="UTF-8" import="CMC.*" import="java.util.*" %>
+    <%@include file="../template.jsp"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,6 +9,5 @@
 <title>View Search Results</title>
 </head>
 <body>
-<%=request.getParameter("school1")%>
 </body>
 </html>
