@@ -11,7 +11,7 @@ import java.util.*;
 public class AdminInteractions {
 	private AdminFunctionalityController afHome;
 	private DBController dbHome;
-	public AdminInteractions() {
+	public AdminInteractions(Account potentialAccount) {
 		afHome = new AdminFunctionalityController();		
 	}
 	public void adminMenu()
@@ -86,8 +86,8 @@ public class AdminInteractions {
 	public void viewSchool(String name) {
 		afHome.viewSchool(name);
 	}
-	public void viewSchools() {
-		afHome.viewSchools();
+	public ArrayList<School> viewSchools() {
+		return afHome.viewSchools();
 	}
 	public void addNewSchool(School school) {
 		afHome.addNewSchool(school);

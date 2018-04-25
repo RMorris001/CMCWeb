@@ -6,7 +6,7 @@
 	UserInteractions ui;
 	AdminInteractions ai;
 	if (potentialUser == null) {
-		response.sendRedirect("index.jsp?Error=nonActive");
+		response.sendRedirect("index.jsp?Error=nonAccount");
 	} else {
 		if (potentialUser.getType() == 'a') {
 			ai = new AdminInteractions();

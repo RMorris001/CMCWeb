@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
+    <%@include file="UserTemplate.jsp"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +9,7 @@
 </head>
 <body>
 
-<table style="text-align: left; width: 25%;" border="1" cellpadding="2"
+<table style="text-align: left; background-color: #F4F6F7; width: 25%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
