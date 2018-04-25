@@ -21,10 +21,13 @@
 </style>
 </head>
 <body>
-	<form action="/action_page.php">
+<a
+href="ViewSchools.jsp">View Schools</a>
+
+	<form action="ViewSchools.jsp">
 		<div class="container1" style="margin: 0px 130px; right: 25px;"
 			align="center"     vertical-align= center
-			> Add School</div>
+			> View Schools</div>
 	</form>
 	<form action="/action_page.php">
 		<div class="container1" align="center" style="margin: 0px 130px;"></div>

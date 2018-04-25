@@ -12,7 +12,7 @@ cellspacing="2">
 <tbody>
 <tr align="center">
 
-<td colspan="17" rowspan="1" style="vertical-align: top;"><a
+<td colspan="18" rowspan="1" style="vertical-align: top;"><a
 href="AddSchool.jsp">ADD A UNIVERSITY</a>
 </td>
 </tr>
@@ -50,6 +50,8 @@ href="AddSchool.jsp">ADD A UNIVERSITY</a>
 </td>
 <td style="vertical-align: top; text-align: center;">Quality of Life Scale (1-5)
 </td>
+<td></td>
+<td></td>
 </tr>
 
 
@@ -72,9 +74,6 @@ for (int i = 0; i < numSchools; i++){
 </td>
 <td style="vertical-align: top;">
 <%=schools.get(i).getControl() %>
-</td>
-<td style="vertical-align: top;">
-<%=schools.get(i).getNumStudents() %>
 </td>
 <td style="vertical-align: top;">
 <%=schools.get(i).getPercentFemale() %>
@@ -107,9 +106,6 @@ for (int i = 0; i < numSchools; i++){
 <%=schools.get(i).getAcademicScale() %>
 </td>
 <td style="vertical-align: top;">
-<%=schools.get(i).getPercentAdmit() %>
-</td>
-<td style="vertical-align: top;">
 <%=schools.get(i).getSocialScale()%>
 </td>
 <td style="vertical-align: top;">
@@ -117,7 +113,8 @@ for (int i = 0; i < numSchools; i++){
 </td>
 
 <td style="vertical-align: top;">
-<form method="post" action="Edit.jsp" name="Edit">
+<form method="post" action="EditSchool.jsp" name="Edit">
+	<input name="Edit" value="Edit" type="submit">
     <input name="Name" value=<%=schools.get(i).getName() %> type="hidden">
     <input name="State" value=<%=schools.get(i).getState() %> type="hidden">
     <input name="Location" value=<%=schools.get(i).getLocation() %> type="hidden">
@@ -137,10 +134,11 @@ for (int i = 0; i < numSchools; i++){
     
 </form>
 </td>
+
 <td style="vertical-align: top;">
-<form method="post" action="Delete.jsp" name="Delete">
-    <input name="Delete" value="Delete" type="submit">
-    <input name="Username" value=<%=schools.get(i).getName() %> type="hidden">
+<form method="post" action="RemoveSchool.jsp" name="Remove">
+    <input name="Remove" value="Remove" type="submit">
+    <input name="Name" value=<%=schools.get(i).getName() %> type="hidden">
 </form>
 </td>
 </tr>

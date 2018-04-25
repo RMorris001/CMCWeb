@@ -9,7 +9,7 @@
 		response.sendRedirect("index.jsp?param=nonAccount");
 	} else {
 		if (potentialUser.getType() == 'a') {
-			ai = new AdminInteractions();
+			ai = new AdminInteractions(potentialUser);
 			session.setAttribute("function", (AdminInteractions)ai);
 			response.sendRedirect("/CMCWeb/AdminFunctionalities/AdminMenu.jsp");
 		} else if (potentialUser.getType() == 'u') {
