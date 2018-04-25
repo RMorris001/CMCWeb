@@ -87,16 +87,10 @@ public class AdminInteractions {
 		}
 		input.close();
 	}
-<<<<<<< HEAD
 	
 	public School viewSchool(String name) {
 		return afHome.viewSchool(name);
-=======
-
-	public void viewSchool(String name) {
-		afHome.viewSchool(name);
->>>>>>> 2cecf4519fa3466dfb0c3e637c690519d7895442
-	}
+}
 
 	public ArrayList<School> viewSchools() {
 		return afHome.viewSchools();
@@ -105,14 +99,11 @@ public class AdminInteractions {
 	public void addNewSchool(School school) {
 		afHome.addNewSchool(school);
 	}
-<<<<<<< HEAD
 	
 	public void removeSchool(School school) {
 		afHome.removeSchool(school);
 	}
-=======
 
->>>>>>> 2cecf4519fa3466dfb0c3e637c690519d7895442
 	public School newSchool() {
 		Scanner input2 = new Scanner(System.in);
 		String name = input2.nextLine();
