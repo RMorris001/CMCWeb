@@ -175,7 +175,7 @@ public class SearchControllerV2 {
 		}
 		// System.out.println(schoolsArray.toString());
 		// femaleL
-		if (!(femaleL == -1)) {
+		if (!(femaleL == -1.0)) {
 			for (School s : schoolsArray) {
 				if (s.getPercentFemale() > femaleL) {
 					tempSchools.add(s);
@@ -187,7 +187,7 @@ public class SearchControllerV2 {
 			tempSchools.clear();
 		}
 		// femaleH
-		if (!(femaleH == -1)) {
+		if (!(femaleH == -1.0)) {
 			for (School s : schoolsArray) {
 				if (s.getPercentFemale() <= femaleH) {
 					tempSchools.add(s);
@@ -273,7 +273,7 @@ public class SearchControllerV2 {
 		}
 		// aidL
 
-		if (aidL >= 0) {
+		if (!(aidL == -1.0)) {
 			for (School s : schoolsArray) {
 
 				if (s.getPercentFinAid() > aidL) {
@@ -286,7 +286,7 @@ public class SearchControllerV2 {
 			tempSchools.clear();
 		}
 		// aidH
-		if (!(aidH == -1)) {
+		if (!(aidH == -1.0)) {
 			for (School s : schoolsArray) {
 				if (s.getPercentFinAid() < aidH) {
 					tempSchools.add(s);
@@ -310,7 +310,7 @@ public class SearchControllerV2 {
 			tempSchools.clear();
 		}
 		// applicantH
-		if (!(aidH == -1)) {
+		if (!(applicantsH == -1)) {
 			for (School s : schoolsArray) {
 				if (s.getNumApplicants() < applicantsH) {
 					tempSchools.add(s);
@@ -322,7 +322,7 @@ public class SearchControllerV2 {
 			tempSchools.clear();
 		}
 		// perAdmittedL
-		if (!(perAdmittedL == -1)) {
+		if (!(perAdmittedL == -1.0)) {
 			for (School s : schoolsArray) {
 				if (s.getPercentAdmit() > perAdmittedL) {
 					tempSchools.add(s);
@@ -335,7 +335,7 @@ public class SearchControllerV2 {
 			;
 		}
 		// perAdmittedH
-		if (!(perAdmittedH == -1)) {
+		if (!(perAdmittedH == -1.0)) {
 			for (School s : schoolsArray) {
 				if (s.getPercentAdmit() < perAdmittedH) {
 					tempSchools.add(s);

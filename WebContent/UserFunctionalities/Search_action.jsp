@@ -4,8 +4,7 @@
 int numStudentsLow, numStudentsHigh, SATVerbalLow, SATVerbalHigh, SATMathLow, SATMathHigh, expensesLow, 
 	expensesHigh, numApplicantsLow, numApplicantsHigh, academicScaleLow, academicScaleHigh, socialScaleLow, socialScaleHigh,
 	qualityScaleLow, qualityScaleHigh;
-double percentFemaleLow, percentFemaleHigh, percentFinAidLow, percentFinAidHigh, percentAdmittedLow, percentAdmittedHigh, 
-percentEnrolledLow, percentEnrolledHigh;
+double percentFemaleLow, percentFemaleHigh, percentFinAidLow, percentFinAidHigh, percentAdmittedLow, percentAdmittedHigh, percentEnrolledLow, percentEnrolledHigh;
 String school = request.getParameter("SchoolName");
 String state = request.getParameter("State");
 String location = request.getParameter("Location");
@@ -117,13 +116,8 @@ emp.add(emphasis1);
 emp.add(emphasis2);
 emp.add(emphasis3);
 emp.add(emphasis4);
-
-ArrayList<School> results = sc.search(school, state, location, control, numStudentsLow, numStudentsHigh, percentFemaleLow, percentFemaleHigh,
-		SATVerbalLow, SATVerbalHigh, SATMathLow, SATMathHigh, expensesLow, expensesHigh, percentFinAidLow, percentFinAidHigh, numApplicantsLow,
-		numApplicantsHigh, percentAdmittedLow, percentAdmittedHigh, percentEnrolledLow, percentEnrolledHigh, academicScaleLow, academicScaleHigh,
-		socialScaleLow, socialScaleHigh, qualityScaleLow, qualityScaleHigh, emp);
-
-//String school1 = results.get(0).getName();
-System.out.println(results);
+//System.out.println(school+state+location+control+numStudentsLow+numStudentsHigh+percentFemaleLow+percentFemaleHigh+SATVerbalLow+SATVerbalHigh+SATMathLow+SATMathHigh+expensesLow+expensesHigh+percentFinAidLow+percentFinAidHigh+numApplicantsLow+numApplicantsHigh+percentAdmittedLow+percentAdmittedHigh+percentEnrolledLow + percentEnrolledHigh+academicScaleLow+academicScaleHigh+socialScaleLow+socialScaleHigh+qualityScaleLow+qualityScaleHigh+emp);
+ArrayList<School> results = sc.search(school, state, location, control, numStudentsLow, numStudentsHigh, percentFemaleLow, percentFemaleHigh,SATVerbalLow, SATVerbalHigh, SATMathLow, SATMathHigh, expensesLow, expensesHigh, percentFinAidLow, percentFinAidHigh, numApplicantsLow,numApplicantsHigh, percentAdmittedLow, percentAdmittedHigh, percentEnrolledLow, percentEnrolledHigh, academicScaleLow, academicScaleHigh,socialScaleLow, socialScaleHigh, qualityScaleLow, qualityScaleHigh, new ArrayList<String>());
+session.setAttribute("results",results);
 response.sendRedirect("ViewSearchResults.jsp");
 %>

@@ -39,7 +39,7 @@
 				<td style="vertical-align: top; white-space: nowrap;">by CONTROL<br>
 				</td>
 				<td style="vertical-align: top;">
-					<input name="Control" >(PRIVATE, STATE, CITY or -1 for UNKNOWN)<br>
+					<input name="Control" value="" >(PRIVATE, STATE, CITY or -1 for UNKNOWN)<br>
 				</td>
 			</tr>
 			<tr>
