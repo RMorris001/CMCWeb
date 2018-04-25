@@ -13,17 +13,18 @@ public class AdminInteractions {
 	private DBController dbHome;
 	private Account currentAdmin;
 	private boolean isLoggedOn;
+
 	public AdminInteractions(Account logAccount) {
-		//currentAdmin = 
+		// currentAdmin =
 		isLoggedOn = true;
-		afHome = new AdminFunctionalityController(logAccount);		
+		afHome = new AdminFunctionalityController(logAccount);
 	}
-	public void adminMenu()
-	{
+
+	public void adminMenu() {
 
 		int selection;
 		String selection2, selection3, selection4;
-		
+
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Choose from these choices");
@@ -50,7 +51,7 @@ public class AdminInteractions {
 		case 2:
 			System.out.println("You picked option 2: View All Schools");
 			viewSchools();
-			
+
 		case 3:
 			System.out.println("You picked option 3: Add New School");
 			School school = newSchool();
@@ -63,7 +64,7 @@ public class AdminInteractions {
 			newAccount();
 			Account account = newAccount();
 			addNewAccount(account);
-			
+
 		case 6:
 			System.out.println("You picked option 6: Deactivate User");
 			Scanner in2 = new Scanner(System.in);
@@ -79,23 +80,26 @@ public class AdminInteractions {
 			selection4 = in3.nextLine();
 			viewAccount(selection4);
 			in3.close();
-			
+
 		default:
 			System.out.println("Unrecognized option");
 			break;
 		}
 		input.close();
 	}
-	
+
 	public void viewSchool(String name) {
 		afHome.viewSchool(name);
 	}
+
 	public ArrayList<School> viewSchools() {
 		return afHome.viewSchools();
 	}
+
 	public void addNewSchool(School school) {
 		afHome.addNewSchool(school);
 	}
+
 	public School newSchool() {
 		Scanner input2 = new Scanner(System.in);
 		String name = input2.nextLine();
@@ -116,52 +120,62 @@ public class AdminInteractions {
 		int qualityLifeScale = input2.nextInt();
 		ArrayList<String> areasOfStudy = new ArrayList<String>();
 
-		
-		School newSchool = new School(name, state, location, 
-				control, numStudents, percentFemale, verbalSAT,
-                mathSAT, expense, percentFinAid, 
-                numApplicants, percentAdmit,
-                percentEnroll, academicScale, socialScale, 
-                qualityLifeScale, areasOfStudy);
-		
+		School newSchool = new School(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT,
+				expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale,
+				qualityLifeScale, areasOfStudy);
+
 		input2.close();
 		return newSchool;
-		
+
 	}
+
 	public ArrayList<Account> viewAccounts() {
 		return afHome.viewAccounts();
 	}
+
 	public Account newAccount() {
 		Scanner input3 = new Scanner(System.in);
 		String username = input3.nextLine();
-		String password = input3.nextLine(); 
+		String password = input3.nextLine();
 		String first = input3.nextLine();
 		String last = input3.nextLine();
 		String typeString = input3.nextLine();
 		char type = typeString.charAt(0);
 		String statusString = input3.nextLine();
 		char status = statusString.charAt(0);
-		
-		Account newAccount = new Account(username,  password,first, 
-				last, type, status);
+
+		Account newAccount = new Account(username, password, first, last, type, status);
 		input3.close();
 		return newAccount;
-		
+
 	}
+
+	public Account newAccount(String username, String password, String first, String last, char type, char status) {
+		Account newAccount = new Account(username, password, first, last, type, status);
+		return newAccount;
+	}
+
 	public void addNewAccount(Account account) {
 		afHome.addNewAccount(account);
 	}
+
 	public void deactivateAccount(User activeUser) {
 		afHome.toggleActivation(activeUser);
 	}
+
 	public void viewAccount(String userName) {
 		afHome.viewAccount(userName);
 	}
+
 	public User getUser(String userName) {
 		Account account = afHome.viewAccount(userName);
 		User curUser = dbHome.getUser(account.getUsername());
 		return curUser;
-		
+
 	}
-	
+
+	public boolean deleteAccount(Account account) {
+		return afHome.deleteAccount(account);
+	}
+
 }
