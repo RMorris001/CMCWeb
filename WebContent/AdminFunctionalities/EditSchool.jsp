@@ -60,7 +60,7 @@ border="1" >
 			<tr>
 				<td style="vertical-align: top; white-space: nowrap;">SAT VERBAL<br>
 				</td>
-				<td style="vertical-align: top;"><input narequest.getParameter("Emphasis")me="SatVerbal" value="<%=school.getVerbalSAT()%>"><br>
+				<td style="vertical-align: top;"><input name="SatVerbal" value="<%=school.getVerbalSAT()%>"><br>
 				</td>
 			</tr>
 			<tr>

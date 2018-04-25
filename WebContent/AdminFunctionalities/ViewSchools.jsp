@@ -116,22 +116,22 @@ for (int i = 0; i < numSchools; i++){
 <td style="vertical-align: top;">
 <form method="post" action="EditSchool.jsp" name="Edit">
 	<input name="Edit" value="Edit" type="submit">
-    <input name="Name" value="<%=schools.get(i).getName() %>" type="hidden">
-    <input name="State" value=<%=schools.get(i).getState() %> type="hidden">
-    <input name="Location" value=<%=schools.get(i).getLocation() %> type="hidden">
-    <input name="Control" value=<%=schools.get(i).getControl() %> type="hidden">
-    <input name="NumStudents" value=<%=schools.get(i).getNumStudents() %> type="hidden">
-    <input name="PercentFemale" value=<%=schools.get(i).getPercentFemale() %> type="hidden">
-    <input name="SATVerbal" value=<%=schools.get(i).getVerbalSAT() %> type="hidden">
-    <input name="SATMath" value=<%=schools.get(i).getMathSAT() %> type="hidden">
-    <input name="Expenses" value=<%=schools.get(i).getExpense() %> type="hidden">
-    <input name="PercentFinAid" value=<%=schools.get(i).getPercentFinAid() %> type="hidden">
-    <input name="NumApplicants" value=<%=schools.get(i).getNumApplicants() %> type="hidden">
-    <input name="PercentAdmit" value=<%=schools.get(i).getPercentAdmit() %> type="hidden">
-    <input name="PercentEnroll" value=<%=schools.get(i).getPercentEnroll() %> type="hidden">
-    <input name="AcademicScale" value=<%=schools.get(i).getAcademicScale() %> type="hidden">
-    <input name="SocialScale" value=<%=schools.get(i).getSocialScale() %> type="hidden">
-    <input name="QualityLifeScale" value=<%=schools.get(i).getQualityLifeScale() %> type="hidden">
+    <input name="Name" value="<%=schools.get(i).getName()%>" type="hidden">
+    <input name="State" value="<%=schools.get(i).getState()%>" type="hidden">
+    <input name="Location" value="<%=schools.get(i).getLocation()%>" type="hidden">
+    <input name="Control" value="<%=schools.get(i).getControl()%>" type="hidden">
+    <input name="NumStudents" value="<%=schools.get(i).getNumStudents()%>" type="hidden">
+    <input name="PercentFemale" value="<%=schools.get(i).getPercentFemale()%>" type="hidden">
+    <input name="SATVerbal" value="<%=schools.get(i).getVerbalSAT()%>" type="hidden">
+    <input name="SATMath" value="<%=schools.get(i).getMathSAT()%>" type="hidden">
+    <input name="Expenses" value="<%=schools.get(i).getExpense()%>" type="hidden">
+    <input name="PercentFinAid" value="<%=schools.get(i).getPercentFinAid()%>" type="hidden">
+    <input name="NumApplicants" value="<%=schools.get(i).getNumApplicants()%>" type="hidden">
+    <input name="PercentAdmit" value="<%=schools.get(i).getPercentAdmit()%>" type="hidden">
+    <input name="PercentEnroll" value="<%=schools.get(i).getPercentEnroll()%>" type="hidden">
+    <input name="AcademicScale" value="<%=schools.get(i).getAcademicScale()%>" type="hidden">
+    <input name="SocialScale" value="<%=schools.get(i).getSocialScale()%>" type="hidden">
+    <input name="QualityLifeScale" value="<%=schools.get(i).getQualityLifeScale()%>" type="hidden">
     
 </form>
 </td>
