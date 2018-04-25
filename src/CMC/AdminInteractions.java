@@ -189,5 +189,9 @@ public class AdminInteractions {
 	public boolean deleteAccount(Account account) {
 		return afHome.deleteAccount(account);
 	}
+	
+	public boolean editAccount(String username, String password, String firstName, String lastName, char type, char status ) {
+		return afHome.editAccount(username, password, firstName, lastName, type, status);
+	}
 
 }

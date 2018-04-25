@@ -17,8 +17,7 @@ School school = ai.viewSchool(request.getParameter("Name"));
 border="1" >
 <tbody>
 <tr>
-<th colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	EDITING <%=school.getName().toUpperCase()%><br>
+<th colspan="2">
 </th>
 </tr>
 

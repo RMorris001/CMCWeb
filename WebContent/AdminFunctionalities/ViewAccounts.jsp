@@ -41,9 +41,9 @@
 				</form>
 
 				<form method="post" action="EditAccount.jsp" name="EditAccount">
-					<input value="Edit" name="Edit" type="submit"
-						style="color: rgb(0, 0, 0);"> <input name="EditAccount"
-						value=<%=a.getFirst()%> type="hidden">
+					<input value="Edit" name="Edit" type="submit"style="color: rgb(0, 0, 0);"> 
+					<input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
+					<input name="UserName" value=<%=a.getUsername()%> type="hidden" >
 				</form>
 
 				<form method="post" action="ChangeStatus.jsp" name="ChangeStatus">
