@@ -145,6 +145,7 @@ for (int i = 0; i < numSchools; i++){
 </tr>
 <%} %>
 
-
+</tbody>
+</table>
 </body>
 </html>
