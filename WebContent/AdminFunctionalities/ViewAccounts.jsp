@@ -34,12 +34,6 @@
 			<td
 				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
 
-				<form method="post" action="ViewAccount.jsp" name="View">
-					<input value="View" name="View" type="submit"
-						style="color: rgb(0, 0, 0);"> <input name="Account"
-						value=<%=a.getFirst()%> type="hidden">
-				</form>
-
 				<form method="post" action="EditAccount.jsp" name="EditAccount">
 					<input value="Edit" name="Edit" type="submit"style="color: rgb(0, 0, 0);"> 
 					<input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
