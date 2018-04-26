@@ -88,6 +88,14 @@ public class AdminInteractions {
 		input.close();
 	}
 	
+	public boolean editSchool(String name, String state, String location, String control, int numStudents,
+            double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
+            int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
+            int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy) {
+		
+		return afHome.editSchool(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT, expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
+	}
+	
 	public School viewSchool(String name) {
 		return afHome.viewSchool(name);
 }
@@ -172,14 +180,17 @@ public class AdminInteractions {
 	}
 
 	public User getUser(String userName) {
-		Account account = afHome.viewAccount(userName);
-		User curUser = dbHome.getUser(account.getUsername());
+		User curUser = afHome.getUser(userName);
 		return curUser;
 
 	}
 
 	public boolean deleteAccount(Account account) {
 		return afHome.deleteAccount(account);
+	}
+	
+	public boolean editAccount(String username, String password, String firstName, String lastName, char type, char status ) {
+		return afHome.editAccount(username, password, firstName, lastName, type, status);
 	}
 
 }

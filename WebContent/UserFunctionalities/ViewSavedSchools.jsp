@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
+    <%@include file="/../General/AccountTemplate.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +18,7 @@
 	ui.saveSchool("PRINCETON");*/
 	ArrayList<School> saved = user.getSaved();%>
 	
-<table style="vertical-align: left; width: 50%; height: 60px;"
+<table style="vertical-align: left; background-color: white; width: 50%; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
 	<tbody>
 		<tr>
@@ -29,7 +30,7 @@
 			<td	style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
 				<form method="post" action="RemoveSavedSchool.jsp" name="View">
 					<input value="Remove" name="Remove" type="submit" style="color: rgb(0, 0, 0);">
-					<input name="School" value=<%=s.getName()%> type="hidden">
+					<input name="School" value="<%=s.getName()%>" type="hidden">
 				</form>
 			</td>
 			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
@@ -38,7 +39,8 @@
 			<td style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
 				<form method="post" action="ViewSchool.jsp" name="View">
 					<input value="View" name="View" type="submit" style="color: rgb(0, 0, 0);">
-					<input name="School" value=<%=s.getName()%> type="hidden">
+					<input name="School" value="<%=s.getName()%>" type="hidden">
+					<input name="Searched" value="0" type="hidden">
 				</form>
 			</td>
 		</tr>
