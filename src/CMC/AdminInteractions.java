@@ -178,13 +178,15 @@ public class AdminInteractions {
 	public void viewAccount(String userName) {
 		afHome.viewAccount(userName);
 	}
-
+	
+	public Account getAccount(String userName) {
+		return afHome.getAccount(userName);
+	}
 	public User getUser(String userName) {
 		User curUser = afHome.getUser(userName);
 		return curUser;
 
 	}
-
 	public boolean deleteAccount(Account account) {
 		return afHome.deleteAccount(account);
 	}

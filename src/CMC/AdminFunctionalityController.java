@@ -252,4 +252,8 @@ public class AdminFunctionalityController {
 		boolean editedAccount = dBController.editAccount(username, password, firstName, lastName, type, status);
 		return editedAccount;
 	}
+	
+	public Account getAccount(String username) {
+		return dBController.getAccount(username);
+	}
 }
