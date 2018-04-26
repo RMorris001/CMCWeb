@@ -44,9 +44,6 @@
 				<form method="post" action="EditAccount.jsp" name="EditAccount">
 					<input value="Edit" name="Edit" type="submit"
 						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
-					 <input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
-				<form method="post" action="EditAccount.jsp" name="EditAccount">
-					<input value="Edit" name="Edit" type="submit"style="color: rgb(0, 0, 0);"> 
 					<input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
 					<input name="UserName" value=<%=a.getUsername()%> type="hidden" >
 				</form>
