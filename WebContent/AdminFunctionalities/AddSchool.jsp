@@ -79,7 +79,7 @@ border="1" >
 			<tr>
 				<td style="vertical-align: top;">NUMBER OF APPLICANTS<br>
 				</td>
-				<td style="vertical-align: top;"><input name="Applicants"%><br>
+				<td style="vertical-align: top;"><input name="Applicants"><br>
 				</td>
 			</tr>
 			<tr>
