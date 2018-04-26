@@ -112,7 +112,7 @@ border="1" >
 				</td>
 			</tr>
 			<tr>
-				<td style="vertical-align: top;">QUALITY OF LIFE SCALE<br>
+				<td style="vertical-align: top;">QUALITY OF LIFE SCALE(1-5)<br>
 				</td>
 				<td style="vertical-align: top;"><input name="Quality" value="<%=school.getQualityLifeScale()%>"><br>
 				</td>
