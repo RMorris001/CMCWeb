@@ -63,7 +63,7 @@ public class AdminInteractions {
 			System.out.println("You picked option 5: Add New Account");
 			newAccount();
 			Account account = newAccount();
-			addNewAccount(account);
+			//addNewAccount(account);
 
 		case 6:
 			System.out.println("You picked option 6: Deactivate User");
@@ -162,13 +162,9 @@ public class AdminInteractions {
 
 	}
 
-	public Account newAccount(String username, String password, String first, String last, char type, char status) {
-		Account newAccount = new Account(username, password, first, last, type, status);
-		return newAccount;
-	}
 
-	public void addNewAccount(Account account) {
-		afHome.addNewAccount(account);
+	public void addNewAccount(String username, String password, String first, String last, char type, char status) {
+		afHome.addNewAccount(username, password, first, last, type, status);
 	}
 
 	public void deactivateAccount(User activeUser) {
