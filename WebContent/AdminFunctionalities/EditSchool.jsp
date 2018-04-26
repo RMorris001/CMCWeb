@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
-<%@include file="/../General/AccountTemplate.jsp"%>
+    <%@include file="../General/GeneralTemplate.jsp"%>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,7 +24,7 @@ border="1" >
 <tr>
 <td style="vertical-align: top; padding-right:400px; white-space: nowrap;">SCHOOL<br>
 				</td>
-				<td style="vertical-align: top;"><input name="SchoolName" value="<%=school.getName()%>"><br>
+				<td style="vertical-align: top;"><input name="Name" value="<%=school.getName()%>"><br>
 				</td>
 			</tr>
 			<tr>
@@ -112,7 +112,7 @@ border="1" >
 				</td>
 			</tr>
 			<tr>
-				<td style="vertical-align: top;">QUALITY OF LIFE SCALE(1-5)<br>
+				<td style="vertical-align: top;">QUALITY OF LIFE SCALE()<br>
 				</td>
 				<td style="vertical-align: top;"><input name="Quality" value="<%=school.getQualityLifeScale()%>"><br>
 				</td>

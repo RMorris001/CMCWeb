@@ -151,8 +151,8 @@ public class AdminFunctionalityController {
 		return dBController.addAccount(account);
 	}
 	
-	public Account getAccount(String uName) {
-		return dBController.getAccount(uName);
+	public User getUser(String uName) {
+		return dBController.getUser(uName);
 	}
 
 	/**
@@ -181,10 +181,6 @@ public class AdminFunctionalityController {
 		return dBController.getAccount(userName);
 	}
 	
-	public User getUser(String userName) {
-		return dBController.getUser(userName);
-	}
-	
 	/**
 	 * Edits a Schools information
 	 * @param name 
@@ -206,15 +202,25 @@ public class AdminFunctionalityController {
 	 * @param areasOfStudy
 	 * @return true if the school was edited, false if not
 	 */
-	public boolean editSchool(String name, String state, String location, String control, int numStudents,
+	public School editSchool(String name, String state, String location, String control, int numStudents,
             double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
             int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
             int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy)
 	{
-		return schoolController.editSchool(name, state, location, control, numStudents,
-            percentFemale, verbalSAT, mathSAT, expense, percentFinAid,
-            numApplicants, percentAdmit, percentEnroll, academicScale, 
-            socialScale, qualityLifeScale, areasOfStudy);
+		School existingSchool = new School(name, state, location, control, numStudents, percentFemale, verbalSAT,
+                mathSAT, expense, percentFinAid, numApplicants, percentAdmit,
+                percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
+
+		School oldSchool = dBController.getSchool(name);
+		dBController.deleteSchool(oldSchool);
+		
+		dBController.addNewSchool(existingSchool);
+		
+		return existingSchool;
+		//return schoolController.editSchool(name, state, location, control, numStudents,
+          //  percentFemale, verbalSAT, mathSAT, expense, percentFinAid,
+          //  numApplicants, percentAdmit, percentEnroll, academicScale, 
+         //   socialScale, qualityLifeScale, areasOfStudy);
 	}
 	/**
 	 * Deletes an Account

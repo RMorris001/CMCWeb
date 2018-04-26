@@ -3,17 +3,19 @@ package CMC;
 import java.util.*;
 
 /**
- * AdminInteractions is the interface for the Admin Interactions
+ * AdminInteractions is the interface for the Admin Functionalites
  * 
  * @author Richard Morris
  * @version February 26, 2018
  */
 public class AdminInteractions {
 	private AdminFunctionalityController afHome;
+	private DBController dbHome;
 	private Account currentAdmin;
 	private boolean isLoggedOn;
 
 	public AdminInteractions(Account logAccount) {
+		// currentAdmin =
 		isLoggedOn = true;
 		afHome = new AdminFunctionalityController(logAccount);
 	}
@@ -86,7 +88,7 @@ public class AdminInteractions {
 		input.close();
 	}
 	
-	public boolean editSchool(String name, String state, String location, String control, int numStudents,
+	public School editSchool(String name, String state, String location, String control, int numStudents,
             double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
             int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
             int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy) {
@@ -176,16 +178,10 @@ public class AdminInteractions {
 	public void viewAccount(String userName) {
 		afHome.viewAccount(userName);
 	}
-	
+
 	public User getUser(String userName) {
-		User curAccount = afHome.getUser(userName);
-		return curAccount;
-
-	}
-
-	public Account getAccount(String userName) {
-		Account curAccount = afHome.getAccount(userName);
-		return curAccount;
+		User curUser = afHome.getUser(userName);
+		return curUser;
 
 	}
 
