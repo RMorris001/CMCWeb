@@ -100,6 +100,13 @@ span.psw {
 	}
 }
 </style>
+
+<Header>
+<div class="header">
+  <a class="logo">    
+  <img src="../General/CmcLogo.png" alt="CmcLogo" height="70" width="70">
+</div>
+</Header>
 <%
 	//For now this does not tell you if you have an incorrect username or password
 	if ((request.getParameter("param")) != null && request.getParameter("param").equals("nonAccount")) {
@@ -113,12 +120,6 @@ span.psw {
 		out.print("<h1 align = center><font color = white>Logout Successful</h1></font>");
 	}
 %>
-<Header>
-<div class="header">
-  <a class="logo">    
-  <img src="../General/CmcLogo.png" alt="CmcLogo" height="70" width="70">
-</div>
-</Header>
 <body>
 	<br>
 	<form action="Login_action.jsp">
