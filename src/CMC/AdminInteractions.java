@@ -88,12 +88,12 @@ public class AdminInteractions {
 		input.close();
 	}
 	
-	public void editSchool(String name, String state, String location, String control, int numStudents,
+	public boolean editSchool(String name, String state, String location, String control, int numStudents,
             double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
             int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
             int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy) {
 		
-		afHome.editSchool(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT, expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
+		return afHome.editSchool(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT, expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
 	}
 	
 	public School viewSchool(String name) {
