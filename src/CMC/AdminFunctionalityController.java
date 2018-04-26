@@ -151,8 +151,8 @@ public class AdminFunctionalityController {
 		return dBController.addAccount(account);
 	}
 	
-	public User getUser(String uName) {
-		return dBController.getUser(uName);
+	public Account getAccount(String uName) {
+		return dBController.getAccount(uName);
 	}
 
 	/**
@@ -179,6 +179,10 @@ public class AdminFunctionalityController {
 	 */
 	public Account viewAccount(String userName) {
 		return dBController.getAccount(userName);
+	}
+	
+	public User getUser(String userName) {
+		return dBController.getUser(userName);
 	}
 	
 	/**

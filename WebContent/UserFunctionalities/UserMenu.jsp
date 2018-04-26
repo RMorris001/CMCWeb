@@ -9,24 +9,36 @@
 </head>
 <body>
 
-<table style="text-align: left; background-color: #F4F6F7; width: 25%;" border="1" cellpadding="2"
+
+
+
+
+
+
+<table style="text-align: center; background-color: #F4F6F7; width: 10%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;"><a
-href="Search.jsp">Search for Schools</a>
+<td colspan="5" rowspan="1" style="vertical-align: top;">
+<form method="post" action="Search.jsp" name="Search">
+	<input value="Search" name="Search" type="submit"style="color: rgb(0, 0, 0);"> 
+</form>
 </td>
 </tr>
 
 <tr>
 <td colspan="5" rowspan="1" style="vertical-align: top;">
-<a href="ViewSavedSchools.jsp">Manage Saved Schools</a>
+<form method="post" action="ViewSavedSchools.jsp" name="Search">
+	<input value="View Saved Schools" name="View Saved Schools" type="submit"style="color: rgb(0, 0, 0);"> 
+</form>
 </td>
 </tr>
 
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;"><a
-href="EditProfile.jsp">Manage Profile</a>
+<td colspan="5" rowspan="1" style="vertical-align: top;">
+<form method="post" action="EditProfile" name="Search">
+	<input value="Edit Profile" name="Edit Profile" type="submit"style="color: rgb(0, 0, 0);"> 
+</form>
 </td>
 </tr>
 

@@ -12,9 +12,8 @@
 
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("function");
-System.out.println(request.getParameter("UserName"));
-User user = ai.getUser(request.getParameter("UserName"));
-System.out.println(user);
+String uName = request.getParameter("UserName");
+Account user = ai.getAccount(uName);
 %>
 <form method="post" action="EditAccount_action.jsp" name="editUser">
 <table style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
@@ -27,7 +26,7 @@ border="1" >
 <tr>
 <td style="vertical-align: top; white-space: nowrap;">First Name<br>
 </td>
-<td style="vertical-align: top;"><input name="FirstName" value="<%=user.getFirst()%>"><br>
+<td style="vertical-align: top;"><input name="FirstName" value=<%=user.getFirst()%>><br>
 </td>
 </tr>
 <tr>
@@ -50,7 +49,14 @@ border="1" >
 <tr>
 <td style="vertical-align: top;">Type<br>
 </td>
-<td style="vertical-align: top;"><input name="Type" value="<%=user.getType()%>"> </td>
+<td style="vertical-align: top;"><input name="Type" value="<%=user.getType()%>">
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Status<br>
+</td>
+<td style="vertical-align: top;"><input name="Status" value="<%=user.getStatus()%>"> 
+</td>
 </tr>
 
 <tr>

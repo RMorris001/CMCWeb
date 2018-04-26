@@ -5,10 +5,10 @@ int numStudentsLow, numStudentsHigh, SATVerbalLow, SATVerbalHigh, SATMathLow, SA
 	expensesHigh, numApplicantsLow, numApplicantsHigh, academicScaleLow, academicScaleHigh, socialScaleLow, socialScaleHigh,
 	qualityScaleLow, qualityScaleHigh;
 double percentFemaleLow, percentFemaleHigh, percentFinAidLow, percentFinAidHigh, percentAdmittedLow, percentAdmittedHigh, percentEnrolledLow, percentEnrolledHigh;
-String school = request.getParameter("SchoolName");
-String state = request.getParameter("State");
-String location = request.getParameter("Location");
-String control = request.getParameter("Control");
+String school = request.getParameter("SchoolName").toUpperCase();
+String state = request.getParameter("State").toUpperCase();
+String location = request.getParameter("Location").toUpperCase();
+String control = request.getParameter("Control").toUpperCase();
 if(request.getParameter("StudentsL").equals(""))
 	numStudentsLow = -1;
 else
