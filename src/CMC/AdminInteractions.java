@@ -63,7 +63,7 @@ public class AdminInteractions {
 			System.out.println("You picked option 5: Add New Account");
 			newAccount();
 			Account account = newAccount();
-			//addNewAccount(account);
+			// addNewAccount(account);
 
 		case 6:
 			System.out.println("You picked option 6: Deactivate User");
@@ -87,18 +87,20 @@ public class AdminInteractions {
 		}
 		input.close();
 	}
-	
+
 	public School editSchool(String name, String state, String location, String control, int numStudents,
-            double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid,
-            int numApplicants, double percentAdmit, double percentEnroll, int academicScale, 
-            int socialScale, int qualityLifeScale, ArrayList<String> areasOfStudy) {
-		
-		return afHome.editSchool(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT, expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale, qualityLifeScale, areasOfStudy);
+			double percentFemale, int verbalSAT, int mathSAT, double expense, double percentFinAid, int numApplicants,
+			double percentAdmit, double percentEnroll, int academicScale, int socialScale, int qualityLifeScale,
+			ArrayList<String> areasOfStudy) {
+
+		return afHome.editSchool(name, state, location, control, numStudents, percentFemale, verbalSAT, mathSAT,
+				expense, percentFinAid, numApplicants, percentAdmit, percentEnroll, academicScale, socialScale,
+				qualityLifeScale, areasOfStudy);
 	}
-	
+
 	public School viewSchool(String name) {
 		return afHome.viewSchool(name);
-}
+	}
 
 	public ArrayList<School> viewSchools() {
 		return afHome.viewSchools();
@@ -107,7 +109,7 @@ public class AdminInteractions {
 	public void addNewSchool(School school) {
 		afHome.addNewSchool(school);
 	}
-	
+
 	public void removeSchool(School school) {
 		afHome.removeSchool(school);
 	}
@@ -162,9 +164,15 @@ public class AdminInteractions {
 
 	}
 
+	public Account newAccount(String username, String password, String first, String last, char type, char status) {
+		Account account = new Account(username, password, first, last, type, status);
+		afHome.addNewAccount(account);
+		return currentAdmin;
+
+	}
 
 	public void addNewAccount(Account account) {
-		afHome.addNewAccount( account);
+		afHome.addNewAccount(account);
 	}
 
 	public void deactivateAccount(User activeUser) {
@@ -174,20 +182,23 @@ public class AdminInteractions {
 	public void viewAccount(String userName) {
 		afHome.viewAccount(userName);
 	}
-	
+
 	public Account getAccount(String userName) {
 		return afHome.getAccount(userName);
 	}
+
 	public User getUser(String userName) {
 		User curUser = afHome.getUser(userName);
 		return curUser;
 
 	}
+
 	public boolean deleteAccount(Account account) {
 		return afHome.deleteAccount(account);
 	}
-	
-	public boolean editAccount(String username, String password, String firstName, String lastName, char type, char status ) {
+
+	public boolean editAccount(String username, String password, String firstName, String lastName, char type,
+			char status) {
 		return afHome.editAccount(username, password, firstName, lastName, type, status);
 	}
 

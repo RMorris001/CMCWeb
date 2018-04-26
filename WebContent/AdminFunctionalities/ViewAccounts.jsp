@@ -11,8 +11,8 @@
 
 	<%
 		DBController dbHome = new DBController();
-		//AdminInteractions ai = (AdminInteractions)session.getAttribute("function"); #4CAF50 #F4F6F7
-		AdminInteractions ai = new AdminInteractions(dbHome.getAdmin("nadmin"));
+		AdminInteractions ai = (AdminInteractions)session.getAttribute("function"); //#4CAF50 #F4F6F7
+		//AdminInteractions ai = new AdminInteractions(dbHome.getAdmin("nadmin"));
 		ArrayList<Account> allAccounts = ai.viewAccounts();
 	%>
 
@@ -58,7 +58,7 @@
 				}%>
 						name="Status" type="submit"
 						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
-					<input name="Account" value=<%=a.getFirst()%> type="hidden">
+					<input name="Username" value=<%=a.getUsername()%> type="hidden">
 				</form>
 
 				<form method="post" action="RemoveAccount.jsp" name="Remove">
