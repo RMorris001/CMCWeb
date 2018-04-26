@@ -163,8 +163,8 @@ public class AdminInteractions {
 	}
 
 
-	public void addNewAccount(String username, String password, String first, String last, char type, char status) {
-		afHome.addNewAccount(username, password, first, last, type, status);
+	public void addNewAccount(Account account) {
+		afHome.addNewAccount( account);
 	}
 
 	public void deactivateAccount(User activeUser) {
