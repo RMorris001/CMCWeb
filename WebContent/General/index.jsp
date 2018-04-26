@@ -1,23 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
-<%@include file="./GeneralTemplate.jsp"%>
-<%
-	//For now this does not tell you if you have an incorrect username or password
-	if ((request.getParameter("param")) != null && request.getParameter("param").equals("nonAccount")) {
-		out.print("<h1 align = center><font color = red>Incorrect Userame or Password</h1></font>");
-	} else if ((request.getParameter("param")) != null && request.getParameter("param").equals("typeError")) {
-		out.print("<h1 align = center><font color = red>Database Error</h1></font>");
-	} else if ((request.getParameter("param")) != null
-			&& request.getParameter("param").equals("securityError")) {
-		out.print("<h1 align = center><font color = red>You Must Be Logged In</h1></font>");
-	} else if ((request.getParameter("param")) != null && request.getParameter("param").equals("out")) {
-		out.print("<h1 align = center><font color = white>Logout Successful</h1></font>");
-	}
-%>
+
 <html>
 <style>
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	  background-color: black
+	
+}
+* {box-sizing: border-box;}
+
+
+.header {
+  overflow: hidden;
+  background-color: #00ff00;
+  padding: 10px 5px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.header-right {
+  float: right;
+  margin: 1%;
 }
 
 input[type=text], input[type=password] {
@@ -76,6 +100,26 @@ span.psw {
 	}
 }
 </style>
+
+<Header>
+<div class="header">
+  <a class="logo">    
+  <img src="../General/CmcLogo.png" alt="CmcLogo" height="70" width="70">
+</div>
+</Header>
+<%
+	//For now this does not tell you if you have an incorrect username or password
+	if ((request.getParameter("param")) != null && request.getParameter("param").equals("nonAccount")) {
+		out.print("<h1 align = center><font color = red>Incorrect Userame or Password</h1></font>");
+	} else if ((request.getParameter("param")) != null && request.getParameter("param").equals("typeError")) {
+		out.print("<h1 align = center><font color = red>Database Error</h1></font>");
+	} else if ((request.getParameter("param")) != null
+			&& request.getParameter("param").equals("securityError")) {
+		out.print("<h1 align = center><font color = red>You Must Be Logged In</h1></font>");
+	} else if ((request.getParameter("param")) != null && request.getParameter("param").equals("out")) {
+		out.print("<h1 align = center><font color = white>Logout Successful</h1></font>");
+	}
+%>
 <body>
 	<br>
 	<form action="Login_action.jsp">
