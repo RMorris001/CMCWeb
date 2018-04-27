@@ -115,7 +115,7 @@ for (int i = 0; i < numSchools; i++){
 
 <td style="vertical-align: top;">
 <form method="post" action="EditSchool.jsp" name="Edit">
-	<input name="Edit" value="Edit" type="submit">
+	<input name="Edit" value="Edit" type="submit" style="color: rgb(0, 0, 0);">
     <input name="Name" value="<%=schools.get(i).getName()%>" type="hidden">
     <input name="State" value="<%=schools.get(i).getState()%>" type="hidden">
     <input name="Location" value="<%=schools.get(i).getLocation()%>" type="hidden">
@@ -138,7 +138,7 @@ for (int i = 0; i < numSchools; i++){
 
 <td style="vertical-align: top;">
 <form method="post" action="RemoveSchool.jsp" name="Remove">
-    <input name="Remove" value="Remove" type="submit">
+    <input name="Remove" value="Remove" type="submit" style="color: rgb(0, 0, 0);">
     <input name="Name" value=<%=schools.get(i).getName() %> type="hidden">
 </form>
 </td>

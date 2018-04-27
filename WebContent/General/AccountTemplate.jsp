@@ -61,7 +61,7 @@ body {
 			src="../General/CmcLogo.png" alt="CmcLogo" height="70" width="70">
 		</a>
 		<div class="header-right">
-			<a href="../General/logout.jsp"><%session.getAttribute("function"). %></a>
+			<a href="../General/logout.jsp"><%=session.getAttribute("function")%></a>
 		</div>
 		<div class="header-right">
 			<a href="../General/logout.jsp">Log Out</a>

@@ -17,7 +17,7 @@
 	%>
 
 	<table align="center"
-		style="background-color: #ecebe8; width: 50%; height: 60px;"
+		style="background-color: #ecebe8; width: 25%; height: 60px;"
 		border="1" cellpadding="2" cellspacing="2">
 
 		<tr>
@@ -29,7 +29,8 @@
 		<tr>
 			<td
 				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
-				<%=a.getFirst()%><br>
+				Username: <%=a.getUsername()%><br>
+				Type: <%if(a.getType() == 'a'){out.print("Admin");}else{out.print("User");}%>
 			</td>
 			<td
 				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
@@ -47,7 +48,7 @@
 					<input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
 					<input name="UserName" value=<%=a.getUsername()%> type="hidden" >
 				</form>
-
+				<%if(a.getType() == 'u'){%>
 				<form class="button" method="post" action="ToggleActivation.jsp"
 					name="ChangeStatus">
 					<input
@@ -60,7 +61,7 @@
 						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
 					<input name="Username" value=<%=a.getUsername()%> type="hidden">
 				</form>
-
+				<%}%>
 				<form method="post" action="RemoveAccount.jsp" name="Remove">
 					<input value="Remove" name="Remove" type="submit"
 						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
@@ -69,9 +70,7 @@
 
 			</td>
 		</tr>
-		<%
-			}
-		%>
+		<%}%>
 
 	</table>
 

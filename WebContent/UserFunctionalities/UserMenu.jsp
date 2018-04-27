@@ -15,29 +15,33 @@
 
 
 
-<table style="text-align: center; background-color: #F4F6F7; width: 10%;" border="1" cellpadding="2"
-cellspacing="2">
+<%--<table style="text-align: center; background-color: #F4F6F7; width: 10%;" border="1" cellpadding="2"
+cellspacing="2">--%>
+<table align="left"
+		style="background-color: #ecebe8; width: 20%; height: 60px;"
+		border="1" cellpadding="2" cellspacing="2">
 <tbody>
+<tr><th colspan="3">USER MENU<br></th></tr>
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;">
+<td align="center" colspan="5" rowspan="1" style="vertical-align: top;">
 <form method="post" action="Search.jsp" name="Search">
-	<input value="Search" name="Search" type="submit"style="color: rgb(0, 0, 0);"> 
+	<input value="Search" name="Search" type="submit" style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;"> 
 </form>
 </td>
 </tr>
 
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;">
+<td align="center" colspan="5" rowspan="1" style="vertical-align: top;">
 <form method="post" action="ViewSavedSchools.jsp" name="Search">
-	<input value="View Saved Schools" name="View Saved Schools" type="submit"style="color: rgb(0, 0, 0);"> 
+	<input value="View Saved Schools" name="View Saved Schools" type="submit" style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;"> 
 </form>
 </td>
 </tr>
 
 <tr>
-<td colspan="5" rowspan="1" style="vertical-align: top;">
-<form method="post" action="EditProfile" name="Search">
-	<input value="Edit Profile" name="Edit Profile" type="submit"style="color: rgb(0, 0, 0);"> 
+<td align="center" colspan="5" rowspan="1" style="vertical-align: top;">
+<form method="post" action="EditProfile.jsp" name="Search">
+	<input value="Edit Profile" name="Edit Profile" type="submit" style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;"> 
 </form>
 </td>
 </tr>
