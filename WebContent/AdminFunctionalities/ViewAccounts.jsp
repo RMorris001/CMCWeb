@@ -36,14 +36,8 @@
 				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
 
 
-				<form method="post" action="ViewAccount.jsp" name="View">
-					<input value="View" name="View" type="submit"
-						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
-					 <input name="Account" value=<%=a.getFirst()%> type="hidden">
-				</form>
-
 				<form method="post" action="EditAccount.jsp" name="EditAccount">
-					<input value="Edit" name="Edit" type="submit"
+					<input value="View/Edit" name="Edit" type="submit"
 						style="background-color: #00b300; /* Green */ border: 1px; color: black; padding: 20px; text-align: center; font-size: 12px; margin: 5px 25px; cursor: pointer; border-radius: 2px; width: 60%;">
 					<input name="EditAccount" value=<%=a.getFirst()%> type="hidden">
 					<input name="UserName" value=<%=a.getUsername()%> type="hidden" >
