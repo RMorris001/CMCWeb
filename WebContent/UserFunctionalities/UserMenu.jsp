@@ -17,7 +17,7 @@
 
 <%--<table style="text-align: center; background-color: #F4F6F7; width: 10%;" border="1" cellpadding="2"
 cellspacing="2">--%>
-<table align="left"
+<table align="center"
 		style="background-color: #ecebe8; width: 20%; height: 60px;"
 		border="1" cellpadding="2" cellspacing="2">
 <tbody>
