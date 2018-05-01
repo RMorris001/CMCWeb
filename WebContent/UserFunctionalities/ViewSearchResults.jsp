@@ -21,7 +21,7 @@
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
 					<form method="post" action="SaveSchool.jsp" name="Save">
 						<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
-						<input name="SchoolName" value='<%=schoolName%>' type="hidden" >
+						<input name="SchoolName" value="<%=schoolName%>" type="hidden" >
 					</form>
 				</td>
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
@@ -30,7 +30,8 @@
 				<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">
 					<form method="post" action="ViewSchool.jsp" name="View">
 						<input value="View" name="View" type="submit" style="color: rgb(0, 0, 0);">
-						<input name="School" value='<%=s.getName()%>' type="hidden">
+						<input name="School" value="<%=s.getName()%>" type="hidden">
+						<input name="Searched" value="1" type="hidden">
 					</form>
 				</td>
 			</tr>

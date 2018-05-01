@@ -156,7 +156,7 @@
 					<td>
 						<form method="post" action="SaveSchool.jsp" name="Save">
 							<input value="Save" name="Save" type="submit" style="color: rgb(0, 0, 0);">
-							<input name="School" value=<%=school.getName()%> type="hidden">
+							<input name="SchoolName" value="<%=school.getName()%>" type="hidden">
 						</form>
 					</td>
 				<%}%>
