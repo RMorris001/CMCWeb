@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
-<%--@include file="/CMCWeb/Security-action.jsp"--%>
-
+<%@include file="/../General/Security-action.jsp"%>
 <%
 	DBController dbHome = new DBController();
 	UserInteractions ui = (UserInteractions) session.getAttribute("function");

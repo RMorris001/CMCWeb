@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
     <%@include file="../General/AccountTemplate.jsp"%>
+    <%@include file="/../General/Security-action.jsp"%>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,13 +14,9 @@ AdminInteractions ai = (AdminInteractions)session.getAttribute("function");
 School school = ai.viewSchool(request.getParameter("Name"));
 %>
 <form method="post" action="EditSchool_action.jsp" name="editSchool">
-<table style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
+<table align = "center" style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
 border="1" >
 <tbody>
-<tr>
-<th colspan="2">
-</th>
-</tr>
 
 <tr>
 <td style="vertical-align: top; padding-right:400px; white-space: nowrap;">SCHOOL<br>

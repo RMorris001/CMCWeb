@@ -8,13 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <body>
 <form method="post" action="AddSchool_action.jsp" name="addSchool">
-<table style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
+<table align = "center" style="text-align: center; background-color: #F4F6F7; width: 266px; height: 228px;"
 border="1" >
 <tbody>
-<tr>
-<th colspan="2">
-</th>
-</tr>
 
 <tr>
 <td style="vertical-align: top; padding-right:400px; white-space: nowrap;">SCHOOL<br>
