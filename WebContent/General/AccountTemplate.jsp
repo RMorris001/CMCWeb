@@ -54,14 +54,25 @@ body {
 		<a class="logo"
 			href=<%if (session.getAttribute("function").getClass().toString().equals("class CMC.UserInteractions")) {
 				out.println("../UserFunctionalities/UserMenu.jsp");
-			}
-		else if(session.getAttribute("function").getClass().toString().equals("class CMC.AdminInteractions")) {
-			out.println("../AdminFunctionalities/AdminMenu.jsp");
-		}%>> <img
-			src="../General/CmcLogo.png" alt="CmcLogo" height="70" width="70">
+			} else if (session.getAttribute("function").getClass().toString().equals("class CMC.AdminInteractions")) {
+				out.println("../AdminFunctionalities/AdminMenu.jsp");
+			}%>>
+			<img src="../General/CmcLogo.png" alt="CmcLogo" height="70"
+			width="70">
 		</a>
 		<div class="header-right">
-			<a href="../General/logout.jsp"><%=session.getAttribute("function")%></a>
+			<a href="../General/logout.jsp">
+				<%
+					if (session.getAttribute("function").getClass().toString().equals("class CMC.UserInteractions")) {
+						UserInteractions temp = (UserInteractions)session.getAttribute("function");
+						out.println(temp.getUser().getUsername());
+
+					} else if (session.getAttribute("function").getClass().toString().equals("class CMC.AdminInteractions")) {
+						AdminInteractions temp = (AdminInteractions)session.getAttribute("function");
+						out.println(temp.getCurrent().getUsername());
+					}
+				%>
+			</a>
 		</div>
 		<div class="header-right">
 			<a href="../General/logout.jsp">Log Out</a>
