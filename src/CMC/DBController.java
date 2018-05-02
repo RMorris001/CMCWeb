@@ -414,12 +414,12 @@ public class DBController {
 	 */
 	public boolean editAccount(String username, String password, String firstName, String lastName, char type,
 			char status) {
-		int accountEdited = DBConnection.user_editUser(username, firstName, lastName, password, type, status);
+		int accountEdited = DBConnection.user_editUser(username, firstName, lastName, password,  type, status);
 
 		if (accountEdited < 0) {
 			return false;
 		} else {
-			this.allAccountsArray.remove(this.getUser(username));
+			this.allAccountsArray.remove(this.getAccount(username));
 			this.allAccountsArray.add(new Account(username, password, firstName, lastName,  type, status));
 			if (type == 'u') {
 				ArrayList<School> tempCollectionOfSavedSchools = this.getUser(username).getSaved();

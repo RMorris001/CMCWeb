@@ -12,7 +12,7 @@
 
 body {
 	font-family: Arial;
-	background-color: black
+	background-color: black;
 }
 
 .header {
