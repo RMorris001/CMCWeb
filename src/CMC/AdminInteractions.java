@@ -164,16 +164,16 @@ public class AdminInteractions {
 
 	}
 
-	public Account newAccount(String username, String password, String first, String last, char type, char status) {
+	public void newAccount(String username, String password, String first, String last, char type, char status) {
 		Account account = new Account(username, password, first, last, type, status);
 		afHome.addNewAccount(account);
-		return currentAdmin;
-
 	}
 
 	public void addNewAccount(Account account) {
 		afHome.addNewAccount(account);
 	}
+	
+	
 
 	public void deactivateAccount(User activeUser) {
 		afHome.toggleActivation(activeUser);

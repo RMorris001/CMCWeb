@@ -23,7 +23,7 @@
 		border="1" cellpadding="2" cellspacing="2">
 
 		<tr>
-			<th colspan="3">All Accounts</th>
+			<th colspan="3"><a href="AddNewAccount.jsp">ADD NEW ACCOUNT</a></th>
 		</tr>
 		<%
 			for (Account a : allAccounts) {

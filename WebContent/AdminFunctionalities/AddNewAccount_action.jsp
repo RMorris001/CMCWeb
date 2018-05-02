@@ -12,12 +12,11 @@
 <body>
 	<%
 		DBController dbHome = new DBController();
-		AdminInteractions ai = new AdminInteractions(dbHome.getAdmin("nadmin"));
-		Account newAccount = ai.newAccount(request.getParameter("Username"), request.getParameter("Password"),
+		AdminInteractions ai = (AdminInteractions)session.getAttribute("function");
+		
+		ai.newAccount(request.getParameter("Username"), request.getParameter("Password"),
 				request.getParameter("FirstName"), request.getParameter("LastName"),
 				request.getParameter("Type").charAt(0), request.getParameter("Status").charAt(0));
-
-		ai.addNewAccount(newAccount);
 		response.sendRedirect("ViewAccounts.jsp");
 	%>
 </body>
