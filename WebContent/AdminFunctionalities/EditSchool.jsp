@@ -20,7 +20,7 @@ border="1" >
 <tbody>
 
 <tr>
-<td style="vertical-align: top; padding-right:400px; white-space: nowrap;">SCHOOL<br>
+<td style="vertical-align: top;">SCHOOL<br>
 				</td>
 				<td style="vertical-align: top;"><input name="Name" value="<%=school.getName()%>"><br>
 				</td>
