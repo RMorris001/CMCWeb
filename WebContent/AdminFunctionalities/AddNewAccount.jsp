@@ -12,8 +12,8 @@
 <body>
 
 	<form method="post" action="AddNewAccount_action.jsp" name="newAccount">
-		<table
-			style="text-align: left; background-color: #4CAF50; width: 266px; height: 228px;"
+		<table align="center"
+			style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
 			border="1">
 			<tbody>
 				<tr>

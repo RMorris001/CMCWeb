@@ -17,7 +17,7 @@ UserInteractions ui = (UserInteractions)session.getAttribute("function");
 User user = ui.getUser();
 %>
 <form method="post" action="EditProfile_action.jsp" name="editUser">
-<table style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
+<table align="center" style="text-align: left; background-color: #F4F6F7; width: 266px; height: 228px;"
 border="1" >
 <tbody>
 <tr>

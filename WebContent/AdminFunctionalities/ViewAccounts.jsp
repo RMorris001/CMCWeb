@@ -17,7 +17,7 @@
 	%>
 
 	<table align="center"
-		style="background-color: #ecebe8; width: 25%; height: 60px;"
+		style="background-color: #F4F6F7; width: 25%; height: 60px;"
 		border="1" cellpadding="2" cellspacing="2">
 
 		<tr>

@@ -20,7 +20,8 @@
 	ui.saveSchool("PRINCETON");*/
 	ArrayList<School> saved = user.getSaved();%>
 	
-<table style="vertical-align: left; background-color: white; width: 50%; height: 60px;"
+<table align="center"
+	style="vertical-align: left; background-color: white; width: 50%; height: 60px;"
 	border="1" cellpadding="2" cellspacing="2">
 	<tbody>
 		<tr>

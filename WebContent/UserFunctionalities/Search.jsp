@@ -12,7 +12,8 @@
 <body>
 <form method="post" action="Search_action.jsp" name="Search">
 
-<table style="text-align: left; background-color: #F4F6F7; width: 235px; height: 280px;"
+<table align="center"
+	style="text-align: left; background-color: #F4F6F7; width: 235px; height: 280px;"
 		border="1" cellpadding="2" cellspacing="2">
 		<tbody>
 			<tr><th colspan="3">SEARCH SCHOOL<br></th></tr>

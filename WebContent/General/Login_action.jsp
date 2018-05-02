@@ -1,4 +1,5 @@
 <%@page language="java" import="CMC.*"%>
+<%@ page errorPage="error.jsp" %>  
 <%
 	LogOn logOnObject = new LogOn();
 	Account potentialUser = logOnObject.run(request.getParameter("Username"), request.getParameter("Password"));
