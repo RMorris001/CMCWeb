@@ -4,7 +4,6 @@
     <%@ page errorPage="error.jsp" %>  
  
 <%
-DBController dbHome = new DBController();
 AdminInteractions ai = (AdminInteractions)session.getAttribute("function");
 String uname = request.getParameter("Username");
 String pword = request.getParameter("Password");

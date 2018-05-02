@@ -118,6 +118,8 @@ span.psw {
 		out.print("<h1 align = center><font color = red>You Must Be Logged In</h1></font>");
 	} else if ((request.getParameter("param")) != null && request.getParameter("param").equals("out")) {
 		out.print("<h1 align = center><font color = white>Logout Successful</h1></font>");
+	}else if ((request.getParameter("param")) != null && request.getParameter("param").equals("deactive")) {
+		out.print("<h1 align = center><font color = gray>Currently Deactivated</h1></font>");
 	}
 %>
 <body>

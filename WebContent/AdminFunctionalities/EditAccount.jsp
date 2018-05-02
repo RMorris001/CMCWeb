@@ -57,7 +57,7 @@ border="1" >
 <tr>
 <td style="vertical-align: top;">Status<br>
 </td>
-<td style="vertical-align: top;"><input name="Status" value="<%=user.getStatus()%>"> 
+<td style="vertical-align: top;"><input name="Status" value="<%=user.getStatus()%>" readonly> 
 </td>
 </tr>
 

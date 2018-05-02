@@ -12,9 +12,7 @@
 <body>
 
 	<%
-		DBController dbHome = new DBController();
 		AdminInteractions ai = (AdminInteractions)session.getAttribute("function"); //#4CAF50 #F4F6F7
-		//AdminInteractions ai = new AdminInteractions(dbHome.getAdmin("nadmin"));
 		ArrayList<Account> allAccounts = ai.viewAccounts();
 	%>
 
@@ -26,12 +24,15 @@
 			<th colspan="3"><a href="AddNewAccount.jsp">ADD NEW ACCOUNT</a></th>
 		</tr>
 		<%
+		System.out.println("*****************************************************************************************************************");
 			for (Account a : allAccounts) {
+				System.out.println(a.getUsername());
+				
 		%>
 		<tr>
 			<td
 				style="vertical-align: top; white-space: nowrap; height: 33%; width: 33%;">
-				Username: <%=a.getUsername()%><br>
+				 <%=a.getUsername()%><br>
 				Type: <%if(a.getType() == 'a'){out.print("Admin");}else{out.print("User");}%>
 			</td>
 			<td

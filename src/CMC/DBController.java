@@ -420,16 +420,16 @@ public class DBController {
 			return false;
 		} else {
 			this.allAccountsArray.remove(this.getUser(username));
-			this.allAccountsArray.add(new Account(username, firstName, lastName, password, type, status));
+			this.allAccountsArray.add(new Account(username, password, firstName, lastName,  type, status));
 			if (type == 'u') {
 				ArrayList<School> tempCollectionOfSavedSchools = this.getUser(username).getSaved();
 				this.allUsersArray.remove(this.getUser(username));
 				this.allUsersArray.add(
-						new User(username, firstName, lastName, password, type, status, tempCollectionOfSavedSchools));
+						new User(username,password, firstName, lastName,  type, status, tempCollectionOfSavedSchools));
 				return true;
 			} else if (type == 'a') {
-				this.allAdminsArray.remove(this.getUser(username));
-				this.allAdminsArray.add(new Account(username, firstName, lastName, password, type, status));
+				this.allAdminsArray.remove(this.getAdmin(username));
+				this.allAdminsArray.add(new Account(username, password, firstName, lastName,  type, status));
 				return true;
 			} else {
 				throw new IllegalArgumentException("Invalid account type");
