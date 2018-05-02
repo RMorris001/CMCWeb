@@ -256,4 +256,8 @@ public class AdminFunctionalityController {
 	public Account getAccount(String username) {
 		return dBController.getAccount(username);
 	}
+	
+	public Account getCurrent() {
+		return curAccount;
+	}
 }

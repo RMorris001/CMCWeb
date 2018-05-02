@@ -201,5 +201,7 @@ public class AdminInteractions {
 			char status) {
 		return afHome.editAccount(username, password, firstName, lastName, type, status);
 	}
-
+	public Account getCurrent() {
+		return afHome.getCurrent();
+	}
 }
