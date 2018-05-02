@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
     <%@include file="/../General/Security-action.jsp"%>
+    <%@ page errorPage="error.jsp" %>  
 <% SearchControllerV2 sc = new SearchControllerV2();
 int numStudentsLow, numStudentsHigh, SATVerbalLow, SATVerbalHigh, SATMathLow, SATMathHigh, expensesLow, 
 	expensesHigh, numApplicantsLow, numApplicantsHigh, academicScaleLow, academicScaleHigh, socialScaleLow, socialScaleHigh,

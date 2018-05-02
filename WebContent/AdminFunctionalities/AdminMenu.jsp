@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8" import="CMC.*" import="java.util.*"%>
 <%@include file="/../General/AccountTemplate.jsp"%>
 <%@include file="/../General/Security-action.jsp"%>
+<%@ page errorPage="error.jsp" %>  
 <html>
 <body>
 	

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8" import="CMC.*" import="java.util.*" %>
 <%@include file="/../General/AccountTemplate.jsp"%>
 <%@include file="/../General/Security-action.jsp"%>
+<%@ page errorPage="error.jsp" %>  
     <%	@SuppressWarnings("unchecked")
     	ArrayList<School> searchResults = (ArrayList<School>) session.getAttribute("results");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
